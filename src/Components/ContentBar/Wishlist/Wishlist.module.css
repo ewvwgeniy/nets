@@ -1,0 +1,30 @@
+.wishlist {
+    padding-top: 30px;
+    padding-left: 10%;
+}
+
+.list {
+    list-style: none;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.item_name {
+
+}
+
+.item_price {
+
+}
+
+.item_add_date {
+
+}
+
+.item_remove {
+
+}

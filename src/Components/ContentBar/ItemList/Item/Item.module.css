@@ -1,0 +1,25 @@
+.item {
+    color: blue;
+    margin: 5px;
+    border: lightskyblue;
+    border-style: solid;
+    border-width: 1px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item img {
+    width: 200px;
+    height: auto;
+}
+
+
+.item a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.info {
+
+}

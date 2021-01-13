@@ -1,0 +1,12 @@
+.list {
+    grid-area: l;
+    padding-top: 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+}
+
+.no_match {
+    grid-column-start: 2;
+}

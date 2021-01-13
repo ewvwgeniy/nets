@@ -1,0 +1,12 @@
+.header {
+    grid-area: h;
+    background-color: lightskyblue;
+    padding-top: 15px;
+    padding-left: 40%;
+    text-decoration: none;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
