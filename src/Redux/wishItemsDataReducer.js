@@ -16,6 +16,7 @@ const wishItemsDataReducer = (state = wish_items_data, action) => {
 
             let now = new Date()
             let wish_id
+
             if (state_copy.length === 0) wish_id = 1
             else wish_id = state_copy[state_copy.length - 1].wish_id + 1
             let wishItem = {
@@ -23,7 +24,7 @@ const wishItemsDataReducer = (state = wish_items_data, action) => {
                 id: action.item.id,
                 item_name: action.item.item_name,
                 item_price: action.item.item_price,
-                add_date: `${(now.getDate() < 10) ? '0' + now.getDate() : now.getDate()}-${(now.getMonth() < 9) ? '0' `${now.getMonth() + 1}` : now.getMonth() + 1}-${now.getFullYear()} ${(now.getHours() < 10) ? '0' + now.getHours() : now.getHours()}:${(now.getMinutes() < 10) ? '0' + now.getMinutes() : now.getMinutes()}`
+                add_date: `${(now.getDate() < 10) ? '0' + now.getDate() : now.getDate()}-${(now.getMonth() < 9) ? '0' + `${now.getMonth() + 1}` : now.getMonth() + 1}-${now.getFullYear()} ${(now.getHours() < 10) ? '0' + now.getHours() : now.getHours()}:${(now.getMinutes() < 10) ? '0' + now.getMinutes() : now.getMinutes()}`
             }
             state_copy.push(wishItem)
             return state_copy
