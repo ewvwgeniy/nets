@@ -9,10 +9,11 @@ const ItemList = (props) => {
     } else {
         items = [...props.items_data]
         items = items.sort((a, b) => b.views_count - a.views_count)
-        items = items.map(i => <Item item_data={i}
-                             searchRowTextDefault={props.searchRowTextDefault}
-                             addItem={props.addItem}
-                             increaseViews={props.increaseViews}/>)
+        items = items.map(element => <Item item_data={element}
+                                           key={element.item_name + element.item_price}
+                                           searchRowTextDefault={props.searchRowTextDefault}
+                                           addItem={props.addItem}
+                                           increaseViews={props.increaseViews}/>)
     }
 
     return (

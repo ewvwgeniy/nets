@@ -1,10 +1,10 @@
 .wishlist {
     padding-top: 30px;
-    padding-left: 10%;
 }
 
 .list {
     list-style: none;
+    text-align: center;
 }
 
 .item {
@@ -27,4 +27,8 @@
 
 .item_remove {
 
+}
+
+.no_match {
+    text-align: center;
 }

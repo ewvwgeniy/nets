@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './ItemPage.module.css'
 
 const ItemPage = (props) => {
@@ -7,7 +6,7 @@ const ItemPage = (props) => {
     }
     return (
         <div className={s.item_page}>
-            <img src={props.item_data.item_img_url}/>
+            <img src={props.item_data.item_img_url} alt={props.item_data.item_name}/>
             <div className={s.info}>
                 <h4>{props.item_data.item_name}</h4>
                 <p>{props.item_data.item_price}</p>

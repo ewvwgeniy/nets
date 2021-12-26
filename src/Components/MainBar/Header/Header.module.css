@@ -1,12 +1,33 @@
 .header {
     grid-area: h;
     background-color: lightskyblue;
-    padding-top: 15px;
-    padding-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
-.header a {
+.logo {
+    margin-left: 100px;
+}
+
+.logo a {
     color: white;
     text-decoration: none;
+}
+
+.pages {
+    justify-self: flex-end;
+    margin-left: auto;
+    /*background-color: deeppink;*/
+}
+
+.pages a {
+    color: blue;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+.pages a.active {
+    color: black;
 }

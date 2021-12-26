@@ -1,34 +1,10 @@
 .toolbar {
-    display: grid;
-
-    grid-template-areas:
-    "s w";
-
-    grid-template-rows: 1fr;
-    grid-template-columns: 8fr 2fr;
     grid-area: tb;
+    margin: auto;
 }
 
 .search {
-    grid-area: s;
-    padding-left: 50%;
     padding-top: 40px;
-}
-
-.pages {
-    grid-area: w;
-    /*background-color: deeppink;*/
-    padding-top: 35px;
-    padding-left: 50px;
-}
-
-.pages a {
-    color: blue;
-    text-decoration: none;
-}
-
-.pages a.active {
-    color: black;
 }
 
 .button {

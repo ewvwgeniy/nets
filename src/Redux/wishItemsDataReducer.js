@@ -2,11 +2,11 @@ const ADD_TO_WISHLIST = 'ADD-TO-WISHLIST'
 const REMOVE_FROM_WISHLIST = 'REMOVE-FROM-WISHLIST'
 
 let wish_items_data = [
-    {wish_id: 1, id: 1, item_name: 'Samsung Note 7 64 Gb', item_price: '799.99 $', add_date: '10-11-2020 01:43'},
+    /*{wish_id: 1, id: 1, item_name: 'Samsung Note 7 64 Gb', item_price: '799.99 $', add_date: '10-11-2020 01:43'},
     {wish_id: 2, id: 2, item_name: 'Xiaomi Redmi 6 512 Gb', item_price: '569.99 $', add_date: '10-11-2020 01:43'},
     {wish_id: 3, id: 3, item_name: 'Samsung Galaxy S20 128 GB', item_price: '929.99 $', add_date: '10-11-2020 01:43'},
     {wish_id: 4, id: 4, item_name: 'Iphone 4 128 GB', item_price: '479.99 $', add_date: '10-11-2020 01:43'},
-    {wish_id: 5, id: 5, item_name: 'Huawei Pro 9', item_price: '794.99 $', add_date: '10-11-2020 01:43'}
+    {wish_id: 5, id: 5, item_name: 'Huawei Pro 9', item_price: '794.99 $', add_date: '10-11-2020 01:43'}*/
 ]
 
 const wishItemsDataReducer = (state = wish_items_data, action) => {
@@ -24,7 +24,7 @@ const wishItemsDataReducer = (state = wish_items_data, action) => {
                 id: action.item.id,
                 item_name: action.item.item_name,
                 item_price: action.item.item_price,
-                add_date: `${(now.getDate() < 10) ? '0' + now.getDate() : now.getDate()}-${(now.getMonth() < 9) ? '0' + `${now.getMonth() + 1}` : now.getMonth() + 1}-${now.getFullYear()} ${(now.getHours() < 10) ? '0' + now.getHours() : now.getHours()}:${(now.getMinutes() < 10) ? '0' + now.getMinutes() : now.getMinutes()}`
+                add_date: `${(now.getDate() < 10) ? '0' + now.getDate() : now.getDate()}-${(now.getMonth() < 9) ? `0${now.getMonth() + 1}` : now.getMonth() + 1}-${now.getFullYear()} ${(now.getHours() < 10) ? '0' + now.getHours() : now.getHours()}:${(now.getMinutes() < 10) ? '0' + now.getMinutes() : now.getMinutes()}`
             }
             state_copy.push(wishItem)
             return state_copy

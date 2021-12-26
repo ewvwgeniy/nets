@@ -18,9 +18,6 @@ const mapDispatchToProps = (dispatch) => {
         searchTextChange: (text) => {
             dispatch(searchRowTextChangeActionCreator(text))
         },
-        searchRowTextDefault: () => {
-            dispatch(searchRowTextChangeActionCreator(''))
-        },
         onSearchClick: () => {
             dispatch(onSearchAC())
         },

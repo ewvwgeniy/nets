@@ -1,6 +1,9 @@
 import wishItemsDataReducer from "./wishItemsDataReducer";
 import itemsAndSearchReducer from "./itemsAndSearchReducer";
 
+// const items = require("./../mobile_parser/phones.json");
+// console.log(items);
+
 let store = {
     _state: {
         items_and_search: {

@@ -1,10 +1,11 @@
 const SEARCH_ROW_TEXT_CHANGE = 'SEARCH-ROW-TEXT-CHANGE'
 const INCREASE_ITEM_VIEWS = 'INCREASE-ITEM-VIEWS'
 const ON_SEARCH = 'ON-SEARCH'
+const SET_PHONES = 'SET-PHONES'
 
 let items_and_search = {
     items_data: [
-        {
+        /*{
             id: 1,
             item_name: 'Samsung Note 7 64 GB',
             item_price: '799.99 $',
@@ -59,7 +60,7 @@ let items_and_search = {
             item_price: '759.99 $',
             views_count: 19,
             item_img_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1WiYIcvGyIhVZ3cvxHeFqjqln86ToSFYPvA&usqp=CAU'
-        }
+        }*/
     ],
     search_info: {
         search_row_text: '',
@@ -105,7 +106,6 @@ const itemsAndSearchReducer = (state = items_and_search, action) => {
             state.items_data.forEach((el, i) => {
                 if (el.id === action.id) index = i
             })
-            console.log(index)
             let state_copy = {
                 ...state,
                 items_data: [
@@ -142,13 +142,22 @@ const itemsAndSearchReducer = (state = items_and_search, action) => {
             optionsOrder(state_copy)
             return state_copy
         }
+        case SET_PHONES: {
+            const items = require("./../mobile_parser/phones.json");
+            let state_copy = {
+                ...state,
+                items_data: items
+            }
+            return state_copy
+        }
         default:
             return state
     }
 }
 
 export const increaseItemViewsAC = (id) => ({type: INCREASE_ITEM_VIEWS, id: id})
-export const onSearchAC = (id) => ({type: ON_SEARCH})
+export const onSearchAC = () => ({type: ON_SEARCH})
+export const setPhoneshAC = () => ({type: SET_PHONES})
 export const searchRowTextChangeActionCreator = (text) => ({type: SEARCH_ROW_TEXT_CHANGE, text: text})
 
 export default itemsAndSearchReducer

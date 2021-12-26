@@ -54,12 +54,6 @@ const ToolBar = (props) => {
                     <button onClick={addItem} className={s.button}>Add to wishlist</button>
                 }
             </div>
-            <div className={s.pages}>
-                <NavLink to="/product" activeClassName={s.active}><span
-                    onClick={props.searchRowTextDefault}>itemlist</span></NavLink>
-                <br/>
-                <NavLink to="/wishlist" activeClassName={s.active}><span onClick={props.searchRowTextDefault}>wishlist</span></NavLink>
-            </div>
         </div>
 
     )
