@@ -18,11 +18,13 @@ Run dependencies installation with the script
 
 ## 5)
 Go to the directory
-### `./mobile_parser`
+### `./src/mobile_parser`
 
 ## 6)
-Run the script
-### `pip install requests, beautifulsoup4, lxml`
+Run the scripts
+### `pip install lxml`
+### `pip install requests`
+### `pip install beautifulsoup4`
 
 ## 7)
 Run the script
