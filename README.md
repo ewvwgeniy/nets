@@ -1,3 +1,9 @@
+# What is Phones.net?
+
+It's a service that takes phones from [https://ek.ua/](https://ek.ua/) by parsing the html of this site.
+It takes general information about the phones and reproduce them in the file phones.json (after the script works) and on the site which you can open by the instructions below.
+On the site you can add phones to the wishlist and use a search. Good luck and buy only good phones!
+
 # Getting Started with Phones.net
 
 ## 1)
